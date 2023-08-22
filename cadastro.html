@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/cadastro.js"></script>
+    
+</head>
+
+<style>
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    margin: 0;
+    margin-right: 10px;
+    color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input[type="text"], input[type="submit"] {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    color: #f0f0f0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+    }
+#fale {
+background-color: #333;
+color: white;
+padding: 10px;
+border-radius: 10px;
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+display: flex;
+align-items: center;
+}
+
+#fale a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#fale a svg {
+    vertical-align: middle;
+}
+
+
+</style>
+
+<body>
+
+    <video autoplay muted loop id="video-background">
+        <source src="/video/atoms_-_8579 (540p).mp4" type="video/mp4">
+    </video>
+
+    <div id="fale">
+        fale conosco 
+        <a href="/fale.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
+            <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+            <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+          </svg></a> 
+    </div>
+    
+    <h1>Cadastro de Cliente</h1>
+    <form action="seu_script_de_processamento.php" method="post">
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep" maxlength="9" required><br>
+
+        <label for="logradouro">Rua:</label>
+        <input type="text" id="logradouro" name="logradouro" required><br>
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" required><br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required><br>
+
+        <label for="uf">estado:</label>
+        <input type="text" id="uf" name="uf" maxlength="2" required><br>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
