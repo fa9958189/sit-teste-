@@ -22,58 +22,71 @@ header {
 }
 
 .logo {
-    width: 100%; /* Ocupa a largura total em telas menores */
-    text-align: center; /* Centraliza o logo */
+    width: 100%;
+    text-align: center;
 }
 
 .logo-img {
-    border-radius: 50%; /* Isso cria uma forma circular */
+    border-radius: 50%;
 }
 
 .menu {
-    width: 100%; /* Ocupa a largura total em telas menores */
-    text-align: center; /* Centraliza o menu */
-    padding-top: 15px; /* Ajusta o preenchimento para melhor espaçamento */
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .menu a {
     color: black;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px; /* Ajusta a margem para melhor espaçamento */
+    margin: 0 15px;
 }
 
 section.sobre {
-    height: auto; /* Remove a altura fixa */
+    height: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Ajuste conforme necessário para afastar do cabeçalho */
 }
 
 .extras {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 70%; /* Ajusta a largura para responsividade */
-    max-width: 700px; /* Define uma largura máxima */
-    height: auto; /* Remove a altura fixa */
+    width: 70%;
+    max-width: 700px;
+    height: auto;
     border-radius: 50%;
-    background-color: darkgreen;
+    background-color: blue;
+
+    /* Adicionar efeito de flutuação */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Ajuste conforme necessário */
+    }
 }
 
 /* Consulta de mídia para telas menores */
 @media screen and (max-width: 768px) {
     .logo, .menu {
-        width: 100%; /* Ocupa a largura total em telas menores */
+        width: 100%;
     }
 
     .menu {
-        padding-top: 15px; /* Ajusta o preenchimento para melhor espaçamento */
+        padding-top: 15px;
     }
 
     .extras {
-        width: 90%; /* Ajusta a largura para telas menores */
-        max-width: none; /* Remove a largura máxima */
-        bottom: -20px; /* Ajusta a posição para telas menores */
-        right: 50%; /* Centraliza os extras em telas menores */
-        transform: translateX(50%); /* Centraliza os extras em telas menores */
+        width: 90%;
+        max-width: none;
+        bottom: -20px;
+        right: 50%;
+        transform: translateX(50%);
     }
 }
