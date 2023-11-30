@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background: url('caminho/para/sua/imagem.jpg') no-repeat right center fixed;
+    background: url('/fotos/ceu.svg') no-repeat right center fixed;
     /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
 
     background-size: cover;
