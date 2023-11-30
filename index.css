@@ -10,11 +10,9 @@ html, body {
 }
 
 body {
-<<<<<<< Updated upstream
-    background: url('/fotos/ceu.svg') no-repeat center center fixed;
-=======
-    background: url('/fotos/Black\ and\ White\ Modern\ Futuristic\ Technology\ Logo.png') no-repeat center center fixed;
->>>>>>> Stashed changes
+    background: url('caminho/para/sua/imagem.jpg') no-repeat right center fixed;
+    /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+
     background-size: cover;
 }
 
@@ -46,31 +44,20 @@ header {
 }
 
 .menu a {
-    color: aliceblue;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     margin: 0 15px;
 }
 
-.menu {
-    /* Updated styles for smaller screens */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 15px;
-}
-
-.menu a {
-    margin: 5px 0;
-}
-
 section.sobre {
-    height: auto;
-    position: relative;
+    height: 100vh; /* Altura total da viewport */
+    position: fixed; /* Fixa a seção para que ela não role com a página */
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
 }
 
 .extras {
@@ -79,6 +66,7 @@ section.sobre {
     height: auto;
     border-radius: 50%;
     background-color: darkgreen;
+    /* Adicionar efeito de flutuação */
     animation: float 3s ease-in-out infinite;
 }
 
@@ -91,29 +79,14 @@ section.sobre {
     }
 }
 
-<<<<<<< Updated upstream
-#image2 {
-    float: right;
-    margin-right: 20px;
-}
-
-=======
->>>>>>> Stashed changes
-/* Media query for smaller screens */
+/* Consulta de mídia para telas menores */
 @media screen and (max-width: 768px) {
     .logo, .menu {
         width: 100%;
     }
 
     .menu {
-        flex-direction: row;
-        justify-content: flex-end;
         padding-top: 15px;
-        margin-top: 0;
-    }
-
-    .menu a {
-        margin: 0 10px;
     }
 
     .extras {
@@ -122,10 +95,5 @@ section.sobre {
         bottom: -20px;
         right: 50%;
         transform: translateX(50%);
-    }
-
-    #image2 {
-        float: none;
-        margin-right: 0;
     }
 }
