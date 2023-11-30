@@ -10,9 +10,8 @@ html, body {
 }
 
 body {
-    background: url('/fotos/ceu.svg') no-repeat center center fixed;
+    background: url('caminho/para/sua/imagem.jpg') no-repeat right center fixed;
     /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
-
     background-size: cover;
 }
 
@@ -44,7 +43,7 @@ header {
 }
 
 .menu a {
-    color: aliceblue;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     margin: 0 15px;
