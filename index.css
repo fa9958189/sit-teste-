@@ -10,7 +10,11 @@ html, body {
 }
 
 body {
+<<<<<<< Updated upstream
     background: url('/fotos/ceu.svg') no-repeat center center fixed;
+=======
+    background: url('/fotos/Black\ and\ White\ Modern\ Futuristic\ Technology\ Logo.png') no-repeat center center fixed;
+>>>>>>> Stashed changes
     background-size: cover;
 }
 
@@ -48,6 +52,18 @@ header {
     margin: 0 15px;
 }
 
+.menu {
+    /* Updated styles for smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 15px;
+}
+
+.menu a {
+    margin: 5px 0;
+}
+
 section.sobre {
     height: auto;
     position: relative;
@@ -75,11 +91,14 @@ section.sobre {
     }
 }
 
+<<<<<<< Updated upstream
 #image2 {
     float: right;
     margin-right: 20px;
 }
 
+=======
+>>>>>>> Stashed changes
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .logo, .menu {
@@ -87,7 +106,14 @@ section.sobre {
     }
 
     .menu {
+        flex-direction: row;
+        justify-content: flex-end;
         padding-top: 15px;
+        margin-top: 0;
+    }
+
+    .menu a {
+        margin: 0 10px;
     }
 
     .extras {
