@@ -1,0 +1,10 @@
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+h2{
+    color: aliceblue;
+    text-align: center;
+    width: 95%;
+}
