@@ -12,8 +12,9 @@ html, body {
 body {
     background: url('/fotos/ceu.svg') no-repeat right center fixed;
     /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
-
     background-size: cover;
+    border: solid 1px;
+    height: 80vh;
 }
 
 .center {
