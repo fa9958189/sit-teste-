@@ -26,18 +26,19 @@
 
     <div class="container">
         <h1>Sistema de Agendamento</h1>
+        
         <form id="appointmentForm">
-            <label for="name">Nome do Cliente:</label>
-            <input type="text" id="name" required>
-
-            <label for="date">Data do Agendamento:</label>
-            <input type="date" id="date" required>
-
-            <label for="time">Horário do Agendamento:</label>
-            <input type="time" id="time" required>
-
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+        
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required>
+        
             <button type="button" onclick="scheduleAppointment()">Agendar</button>
-        </form>
+          </form>
 
         <div id="appointments">
             <h2>Próximos Agendamentos</h2>
