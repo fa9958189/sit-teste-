@@ -61,6 +61,9 @@ function setReminder(date, time, message) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var navbar = document.getElementById('navbar');
+    var sidebar = document.createElement('div');
+    sidebar.className = 'sidebar';
+    document.body.appendChild(sidebar);
   
     // Adiciona um ícone para a navegação em telas pequenas
     var icon = document.createElement('a');
@@ -69,8 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
     icon.innerHTML = '&#9776;'; // &#9776; é o código HTML para o ícone de três linhas (hamburguer)
     navbar.appendChild(icon);
   
-    // Adiciona a funcionalidade de exibir/ocultar links ao clicar no ícone
+    // Adiciona a funcionalidade de exibir/ocultar menu lateral ao clicar no ícone
     icon.addEventListener('click', function() {
-      navbar.classList.toggle('responsive');
+      sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
     });
+  
+    // Adiciona links ao menu lateral
+    var pages = ['Home', 'Sobre', 'Contato']; // Adicione suas páginas aqui
+    for (var i = 0; i < pages.length; i++) {
+      var pageLink = document.createElement('a');
+      pageLink.href = '#' + pages[i].toLowerCase();
+      pageLink.textContent = pages[i];
+      sidebar.appendChild(pageLink);
+    }
   });
