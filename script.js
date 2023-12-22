@@ -58,31 +58,26 @@ function setReminder(date, time, message) {
     // Implemente a lógica de lembrete aqui (pode usar notificações, por exemplo)
     console.log(`Lembrete: ${message} em ${date} às ${time}`);
 }
-
 document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.getElementById('navbar');
-    var sidebar = document.createElement('div');
-    sidebar.className = 'sidebar';
-    document.body.appendChild(sidebar);
-  
-    // Adiciona um ícone para a navegação em telas pequenas
-    var icon = document.createElement('a');
-    icon.href = 'javascript:void(0);';
-    icon.className = 'icon';
-    icon.innerHTML = '&#9776;'; // &#9776; é o código HTML para o ícone de três linhas (hamburguer)
-    navbar.appendChild(icon);
+    var sidebar = document.getElementById('sidebar');
+    var sidebarToggle = document.getElementById('sidebarToggle');
+    var closeBtn = document.getElementById('closeBtn');
   
     // Adiciona a funcionalidade de exibir/ocultar menu lateral ao clicar no ícone
-    icon.addEventListener('click', function() {
-      sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+    sidebarToggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
     });
   
-    // Adiciona links ao menu lateral
-    var pages = ['Home', 'Sobre', 'Contato']; // Adicione suas páginas aqui
-    for (var i = 0; i < pages.length; i++) {
-      var pageLink = document.createElement('a');
-      pageLink.href = '#' + pages[i].toLowerCase();
-      pageLink.textContent = pages[i];
-      sidebar.appendChild(pageLink);
-    }
+    // Adiciona a funcionalidade de fechar o menu lateral ao clicar no botão "Fechar"
+    closeBtn.addEventListener('click', function() {
+      sidebar.classList.remove('open');
+    });
+  
+    // Fecha o menu lateral ao clicar em qualquer lugar fora dele
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.sidebar') && !e.target.matches('#sidebarToggle')) {
+        sidebar.classList.remove('open');
+      }
+    });
   });
+  
