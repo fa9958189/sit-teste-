@@ -7,9 +7,18 @@
     <title>Sistema de Agendamento</title>
 </head>
 <body>
+    <div class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </div>
+    
     <div class="container">
         <h1>Sistema de Agendamento</h1>
         <form id="appointmentForm">
+            <label for="name">Nome do Cliente:</label>
+            <input type="text" id="name" required>
+
             <label for="date">Data do Agendamento:</label>
             <input type="date" id="date" required>
 
